@@ -19,3 +19,8 @@ Lab A: Reproducible Foundations
 
 **Conclusion:** 
 The environment setup and simulation verification went smoothly. Writing the automated tests with pytest confirmed that the simulation correctly handles edge cases (like negative rates) and adheres to physical radioactive decay laws. The performance comparison dramatically highlights the efficiency of vectorized NumPy operations over pure-Python loops.
+## PW2 Lab A - Motion from Tracking Data
+- **Mean Acceleration**: -8.58 m/s^2 (close to the true free-fall acceleration -9.81 m/s^2)
+- **Noise Observation**: The acceleration data is extremely noisy (standard deviation of 28.72) because differentiating twice (`np.gradient`) magnifies small measurement errors and noise from the position data.
+- **Integration Result**: Integrating the noisy acceleration back up to velocity and position successfully suppresses the noise, recovering the original position within about 0.78 meters of the largest difference.
+
